@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.com.teste.deplody</groupId>
+  <artifactId>deplodys</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  
+	  <dependencies>
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-web</artifactId><!-- CONFIGURANDO AS DEPENDENCIAS DO SPRING BOOT PASSO 1 -->
+		<version>1.4.0.RELEASE</version>
+	</dependency> 
+	
+	
+	<dependency>
+		<groupId>org.springframework.boot</groupId><!-- CONFIGURANDO AS DEPENDENCIAS DO SPRING BOOT/JPA -->
+		<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		<version>1.4.0.RELEASE</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-data-jpa</artifactId>
+		<version>1.4.0.RELEASE</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>mysql</groupId><!-- CONFIGURANDO AS DEPENDENCIAS DO SPRING BOOT PARA CONECTAMOS NOSSO BANCO DE DADOS -->
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.40</version>
+	</dependency>
+	
+		<dependency><!-- identifica quando o código sofreu alterações e reinicia o servidor automaticamente -->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<version>1.4.0.RELEASE</version>
+		</dependency>
+	      <!-- 
+		<dependency>
+			<groupId>br.com.alura.enviadorEmail</groupId>
+			<artifactId>enviadorEmail</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>-->
+
+	</dependencies>
+			<build>
+			<plugins>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<version>2.0.4.RELEASE</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>repackage</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</build>
+</project>
